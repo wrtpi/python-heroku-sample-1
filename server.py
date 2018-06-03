@@ -52,6 +52,8 @@ def loginc9():
         client.find_element_by_xpath("//a[@href='https://ide.c9.io/user/app']").click()
         time.sleep(1500)
         client.get("https://appid.herokuapp.com")
+        time.sleep(300)
+        client.quit()
         return True
     except:
         return False
@@ -61,4 +63,4 @@ os.system("nohup gost -L socks+ws://:$PORT >/dev/null 2>&1 &")
 while True:
     if not loginc9():
         continue
-    time.sleep(1800)
+    time.sleep(600)
