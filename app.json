@@ -1,0 +1,15 @@
+{
+  "name": "Python Heroku Sample",
+  "description": "A sample Python app on Heroku",
+  "keywords": [
+    "heroku",
+    "python",
+    "sample"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/xuiv/heroku-buildpack-python.git"
+    }
+  ],
+  "repository": "https://github.com/xuiv/python-heroku-sample"
+}
