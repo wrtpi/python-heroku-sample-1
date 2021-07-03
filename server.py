@@ -56,17 +56,16 @@ def clicker(client):
 
 while True:
     chrome_exec_shim = os.environ.get("GOOGLE_CHROME_SHIM", None)
-    chromedriver_path = os.environ.get("CHROMEDRIVER_PATH", None)
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = chrome_exec_shim    
     chromeuser_path = os.path.join(gettempdir(), '.{}'.format(hash(os.times())))
     chrome_options.add_argument('--user-data-dir=' + chromeuser_path)
-    chrome_options.add_argument('--headless')
+    #chrome_options.add_argument('--headless')
     chrome_options.add_argument("--disable-popup-blocking")
     #chrome_options.add_argument('--proxy-server=socks5://localhost:1080')
     #chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:5003")
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     chrome_options.add_experimental_option("prefs", prefs)
 
-    client = webdriver.Chrome(chrome_options=chrome_options, executable_path=chromedriver_path)
+    client = webdriver.Chrome(chrome_options=chrome_options)
     clicker(client)      
