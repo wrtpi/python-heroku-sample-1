@@ -57,8 +57,8 @@ def clicker(client):
 while True:
     chrome_exec_shim = os.environ.get("GOOGLE_CHROME_SHIM", None)
     chromedriver_path = os.environ.get("CHROMEDRIVER_PATH", None)
-    chrome_options.binary_location = chrome_exec_shim
     chrome_options = webdriver.ChromeOptions()
+    chrome_options.binary_location = chrome_exec_shim    
     chromeuser_path = os.path.join(gettempdir(), '.{}'.format(hash(os.times())))
     chrome_options.add_argument('--user-data-dir=' + chromeuser_path)
     chrome_options.add_argument('--headless')
