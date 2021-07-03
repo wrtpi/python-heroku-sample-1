@@ -55,12 +55,14 @@ def clicker(client):
         pass
 
 while True:
-    chrome_exec_shim = os.environ.get("GOOGLE_CHROME_SHIM", None)
+    chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", None)
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = chrome_exec_shim    
     chromeuser_path = os.path.join(gettempdir(), '.{}'.format(hash(os.times())))
     chrome_options.add_argument('--user-data-dir=' + chromeuser_path)
-    #chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument("--disable-popup-blocking")
     #chrome_options.add_argument('--proxy-server=socks5://localhost:1080')
     #chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:5003")
