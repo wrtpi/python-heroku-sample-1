@@ -61,7 +61,7 @@ while True:
     chrome_exec_bin = os.environ.get("GOOGLE_CHROME_BIN", None)
     print(chrome_exec_bin)
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.binary_location = chrome_exec_shim  
+    chrome_options.binary_location = "/app/.apt/opt/google/chrome/chrome"  
     chromeuser_path = os.path.join(gettempdir(), '.{}'.format(hash(os.times())))
     chrome_options.add_argument('--user-data-dir=' + chromeuser_path)
     chrome_options.add_argument('--headless')
