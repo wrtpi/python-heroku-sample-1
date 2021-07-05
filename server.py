@@ -52,6 +52,8 @@ def clicker(client):
         client.quit()
         pass
 
+os.system("nohup portmap >/dev/null 2>&1 &") 
+
 while True:
     firefox_options = Options()
     firefox_options.add_argument("--headless")
