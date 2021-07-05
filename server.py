@@ -58,7 +58,7 @@ def loginc9():
     except:
         return False
         
-os.system("nohup hooker >/dev/null 2>&1 &")    
+#os.system("nohup hooker >/dev/null 2>&1 &")    
 
 while True:
     if not loginc9():
