@@ -45,15 +45,7 @@ def clicker(client):
             client.get("http://j.gs/25551289/girlxxx04")
             WebDriverWait(client, 10).until(EC.element_to_be_clickable((By.ID, "skip_bu2tton"))).click()
             time.sleep(5)
-            client.delete_all_cookies()
-            if len(client.window_handles) < 5:
-                link = "window.open(\"http://adf.ly/25551289/www.pornhub.com/view_video.php?viewkey="+id_generator()+"\");"
-                client.execute_script(link)            
-            client.switch_to.window(client.window_handles[4])
-            client.get("http://q6cmjtydyn2.herokuapp.com")
-            #WebDriverWait(client, 10).until(EC.element_to_be_clickable((By.ID, "skip_bu2tton"))).click()
-            time.sleep(5)
-            client.delete_all_cookies()            
+            client.delete_all_cookies()          
             time.sleep(5)
     except:
         print("----exceptions----")
