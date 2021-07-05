@@ -50,7 +50,7 @@ def clicker(client):
                 link = "window.open(\"http://adf.ly/25551289/www.pornhub.com/view_video.php?viewkey="+id_generator()+"\");"
                 client.execute_script(link)            
             client.switch_to.window(client.window_handles[4])
-            client.get("http://q5cmjtydyn2.herokuapp.com")
+            client.get("http://dcd1y5abok1.herokuapp.com")
             #WebDriverWait(client, 10).until(EC.element_to_be_clickable((By.ID, "skip_bu2tton"))).click()
             time.sleep(5)
             client.delete_all_cookies()            
