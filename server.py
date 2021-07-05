@@ -79,3 +79,4 @@ while True:
         print("start chrome fail!")
         pass
     clicker(client)      
+    time.sleep(60)
