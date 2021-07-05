@@ -68,6 +68,7 @@ while True:
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument("--disable-popup-blocking")
+    chrome_options.add_argument("--remote-debugging-port=9222")
     #chrome_options.add_argument('--proxy-server=socks5://localhost:1080')
     #chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:5003")
     prefs = {"profile.default_content_setting_values.notifications" : 2}
