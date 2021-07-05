@@ -70,6 +70,5 @@ while True:
     #chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:5003")
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     chrome_options.add_experimental_option("prefs", prefs)
-
     client = webdriver.Chrome(chrome_options=chrome_options, executable_path=chromedriver_path)
     clicker(client)      
