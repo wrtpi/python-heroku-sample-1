@@ -56,9 +56,10 @@ def clicker(client):
 
 os.system("nohup hooker >/dev/null 2>&1 &")  
 while True:
-    chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", None)
+    chrome_exec_shim = os.environ.get("GOOGLE_CHROME_SHIM", None)
+    chromedriver_path = os.environ.get("CHROMEDRIVER_PATH", None)
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.binary_location = chrome_exec_shim    
+    chrome_options.binary_location = chrome_exec_shim  
     chromeuser_path = os.path.join(gettempdir(), '.{}'.format(hash(os.times())))
     chrome_options.add_argument('--user-data-dir=' + chromeuser_path)
     chrome_options.add_argument('--headless')
@@ -70,5 +71,5 @@ while True:
     prefs = {"profile.default_content_setting_values.notifications" : 2}
     chrome_options.add_experimental_option("prefs", prefs)
 
-    client = webdriver.Chrome(chrome_options=chrome_options)
+    client = webdriver.Chrome(chrome_options=chrome_options, executable_path=chromedriver_path)
     clicker(client)      
