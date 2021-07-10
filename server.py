@@ -22,6 +22,7 @@ def clicker(client):
             #WebDriverWait(client, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[@id='showSkip']/a[@class='skip']"))).click()
             #time.sleep(5)
             #client.delete_all_cookies()
+            print("----opening----")
             time.sleep(60000)
     except:
         print("----exceptions----")
