@@ -29,11 +29,12 @@ def clicker(client):
         client.quit()
         pass
 
-os.system("nohup portmap >/dev/null 2>&1 &") 
+#os.system("nohup portmap >/dev/null 2>&1 &") 
 
 while True:
-    firefox_options = Options()
-    firefox_options.add_argument("--headless")
-    client = webdriver.Firefox(options=firefox_options)
-    client.set_window_size(1366, 768)
-    clicker(client)      
+    #firefox_options = Options()
+    #firefox_options.add_argument("--headless")
+    #client = webdriver.Firefox(options=firefox_options)
+    #client.set_window_size(1366, 768)
+    #clicker(client)      
+    time.sleep(600)
